@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Own Mini Calculator using HTML</title>
+</head>
+<body>
+	<h1 align="middle">My Own Simple Mini Calculator</h1>
+	<p align="middle"> Just for fun experience </p>
+	<h3 align="middle">Only using HTML</h3>
+<form name="calculator" align="middle">
+	<input type="text" name="answer">
+	<br>
+	<br>
+	<input type="button" value="1" align="left" onclick="calculator.answer.value += '1'">
+	<input type="button" value="2" onclick="calculator.answer.value += '2'">
+	<input type="button" value="3" onclick="calculator.answer.value += '3'">
+	<input type="button" value="C" onclick="calculator.answer.value = ''">
+	<br>
+	<br>
+	<input type="button" value="4" onclick="calculator.answer.value += '4'">
+	<input type="button" value="5" onclick="calculator.answer.value += '5'">
+	<input type="button" value="6" onclick="calculator.answer.value += '6'">
+	<input type="button" value="+" onclick="calculator.answer.value += '+'">
+	<br>
+	<br>
+	<input type="button" value="7" onclick="calculator.answer.value += '7'">
+	<input type="button" value="8" onclick="calculator.answer.value += '8'">
+	<input type="button" value="9" onclick="calculator.answer.value += '9'">
+	<input type="button" value="-" onclick="calculator.answer.value += '-'">
+	<br>
+	<br>
+	<input type="button" value="." onclick="calculator.answer.value += '.'">
+	<input type="button" value="X" onclick="calculator.answer.value += '*'">
+	<input type="button" value="/" onclick="calculator.answer.value += '/'">
+	<input type="button" value="=" onclick="calculator.answer.value = eval(calculator.answer.value)">
+</form>
+</body>
+</html>
