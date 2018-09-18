@@ -17,7 +17,7 @@ JAW_POINTS = list(range(0,17))
 ALIGN_POINTS = (LEFT_BROW_POINTS + RIGHT_EYE_POINTS + LEFT_EYE_POINTS + RIGHT_BROW_POINTS + NOSE_POINTS + MOUTH_POINTS)
 OVERLAY_POINTS = [LEFT_BROW_POINTS + RIGHT_EYE_POINTS + LEFT_EYE_POINTS + RIGHT_BROW_POINTS + NOSE_POINTS + MOUTH_POINTS]
 COLOUR_CORRECT_BLUR_FRAC = 0.6
-cascade_path = 'haar_cascades\haarcascade_frontalface_default.xml'
+cascade_path = 'directory_of_haarcascade_path'
 cascade = cv2.CascadeClassifier(cascade_path)
 detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor(PREDICTOR_PATH)
@@ -77,7 +77,7 @@ def transformation_from_points(points1,points2):
     return np.vstack([np.hstack(((S2/S1)*R, C2.T - (S2/S1)*R * C1.T)), np.matrix([0.,0.,1.])])
 
 def read_im_and_landmarks(filter_name):
-    im = cv2.imread('G:\Python Folder\Open-CV\jack.jpg')
+    im = cv2.imread('celebrity image directory path')
     # gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
     im = cv2.resize(im, None, fx=0.35, fy=0.35, interpolation=cv2.INTER_LINEAR)
     im = cv2.resize(im, (im.shape[1] * SCALE_FACTOR, im.shape[0] * SCALE_FACTOR))
@@ -120,7 +120,7 @@ def face_swap(img, name):
     return image
 
 cap = cv2.VideoCapture(0)
-filter_image = cv2.imread('G:\Python Folder\Open-CV\miley.jpg')
+filter_image = cv2.imread('celebrity_image_path')
 dlibOn = False
 
 while True:
